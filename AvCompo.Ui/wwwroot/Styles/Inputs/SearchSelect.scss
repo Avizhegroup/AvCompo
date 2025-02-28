@@ -1,0 +1,65 @@
+﻿.av-search-select {
+    position: relative;
+    display: inline-block;
+    
+    input {
+        border: 1px solid #c4c4c4;
+        margin-top: 5px;
+        height: 25px;
+        text-align: center;
+        text-align: start; 
+        width: 100%; 
+        padding-left: 8px; 
+        box-sizing: border-box; 
+    }
+
+    .select-box {
+        border: 1px solid #ccc;
+        padding: 8px;
+        cursor: pointer;
+        background-color: #fff;
+        height: 39px;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center; 
+
+        .select-box-placeholder {
+            display: flex;
+            justify-content: start; 
+            color: #c4c4c4;
+            width: 100%;
+            align-items:start;
+        }
+
+        .select-box-icon {
+            left: 5px;
+            position: absolute;
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        z-index: 1;
+        max-height: 200px;
+        overflow-y: auto;
+
+        .dropdown-item {
+            padding: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+
+        .dropdown-item.highlighted {
+            background-color: #d3d3d3;
+        }
+    }
+}
