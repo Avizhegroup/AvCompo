@@ -1,0 +1,9 @@
+﻿[
+  {
+    "inputFile": "wwwroot/Styles/AvCompo.Ui.scss",
+    "outputFile": "wwwroot/Styles/AvCompo.Ui.css",
+    "minify": {
+      "enabled": true
+    }
+  }
+]

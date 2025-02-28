@@ -1,0 +1,42 @@
+﻿@namespace AvCompo.Ui
+@typeparam TItem
+@typeparam TValue
+
+<div id="search-select-@Id"
+     class="av-search-select"
+     style="width:@Width;">
+    <div class="select-box"
+         @onclick="OnSelectBoxClick">
+        @if (Value == null)
+        {
+            <span class="select-box-placeholder">@Placeholder</span>
+        }
+        else
+        {
+            <span>@GetItemText(Items.FirstOrDefault(item => GetItemValue(item)?.Equals(Value) is true))</span>
+        }
+        <AvMaterialIcon Class="select-box-icon"
+                      IconName="@MaterialIconsHelper.Arrow_drop_down" />
+    </div>
+    <div class="dropdown"
+         style="display:@(IsDropdownVisible ? "block" : "none")">
+        <input type="text"
+               @bind-value="SearchText"
+               @onfocus="OnSearchTextFocus"
+               @oninput="OnSearchTextChanged"
+               @onkeydown="OnKeyDown"
+               placeholder="@TextResources.APP_StringKeys_Search"
+               @ref="SearchInputRef" />
+        <div class="dropdown-item"
+             @onclick="OnClearItemSelect">
+            @TextResources.APP_StringKeys_NotChoosed
+        </div>
+        @foreach (var item in FilteredItems)
+        {
+            <div class="dropdown-item @(HighlightedIndex != -1 && item.Equals(FilteredItems[HighlightedIndex]) ? "highlighted" : "")"
+                 @onclick="() => SelectItem(item, HighlightedIndex)">
+                @GetItemText(item)
+            </div>
+        }
+    </div>
+</div>

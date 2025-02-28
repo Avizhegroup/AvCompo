@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "wwwroot/Scripts/AvCompo.Ui.min.js",
+    "inputFiles": [
+      "wwwroot/Scripts/AvCompo.Ui.js"
+    ]
+  }
+]
