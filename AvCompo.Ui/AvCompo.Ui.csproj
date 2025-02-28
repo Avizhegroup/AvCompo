@@ -27,4 +27,9 @@
 	  <ProjectReference Include="..\AvCompo.Tools\AvCompo.Tools.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<Content Include="wwwroot\Scripts\AvCompo.Ui.min.js" Pack="true" PackagePath="content\wwwroot\scripts" />
+		<Content Include="wwwroot\Styles\AvCompo.Ui.min.css" Pack="true" PackagePath="content\wwwroot\css" />
+	</ItemGroup>
+
 </Project>
