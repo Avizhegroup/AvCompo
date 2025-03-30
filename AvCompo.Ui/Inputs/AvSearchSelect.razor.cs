@@ -12,6 +12,7 @@ public partial class AvSearchSelect<TItem, TValue>
     [Parameter] public string Width { get; set; } = "200px";
     [Parameter] public TValue? Value { get; set; }
     [Parameter] public EventCallback<TValue?> ValueChanged { get; set; }
+    [Parameter] public EventCallback<TValue?> OnValueChange { get; set; }
 
     [Inject] public IJSRuntime JSRuntime { get; set; }
 
@@ -61,6 +62,7 @@ public partial class AvSearchSelect<TItem, TValue>
         HighlightedIndex = -1;
 
         await ValueChanged.InvokeAsync(Value);
+        await OnValueChange.InvokeAsync(Value);
 
         IsDropdownVisible = false;
     }
@@ -72,6 +74,7 @@ public partial class AvSearchSelect<TItem, TValue>
         HighlightedIndex = index;
 
         await ValueChanged.InvokeAsync(Value);
+        await OnValueChange.InvokeAsync(Value);
 
         IsDropdownVisible = false;
     }
@@ -141,7 +144,7 @@ public partial class AvSearchSelect<TItem, TValue>
         switch (e.Key)
         {
             case "ArrowDown":
-                HighlightedIndex = (HighlightedIndex+1) % FilteredItems.Count;
+                HighlightedIndex = (HighlightedIndex + 1) % FilteredItems.Count;
                 await ScrollToHighlightedDropDownItem();
                 break;
             case "ArrowUp":
@@ -161,4 +164,5 @@ public partial class AvSearchSelect<TItem, TValue>
     {
         await JSRuntime.InvokeVoidAsync("scrollToHighlightedDropDownItem", $"search-select-{Id}", HighlightedIndex);
     }
+
 }

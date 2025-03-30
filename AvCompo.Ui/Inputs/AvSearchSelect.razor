@@ -3,7 +3,7 @@
 @typeparam TValue
 
 <div id="search-select-@Id"
-     class="av-search-select"
+     class="search-select"
      style="width:@Width;">
     <div class="select-box"
          @onclick="OnSelectBoxClick">
@@ -15,7 +15,7 @@
         {
             <span>@GetItemText(Items.FirstOrDefault(item => GetItemValue(item)?.Equals(Value) is true))</span>
         }
-        <AvMaterialIcon Class="select-box-icon"
+        <MaterialIcon Class="select-box-icon"
                       IconName="@MaterialIconsHelper.Arrow_drop_down" />
     </div>
     <div class="dropdown"
