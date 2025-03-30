@@ -15,6 +15,7 @@
 		<RepositoryUrl>https://github.com/Avizhegroup/AvCompo</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>blazor, component</PackageTags>
+		<EnableDefaultContentItems>false</EnableDefaultContentItems>
 	</PropertyGroup>
 
 	<ItemGroup>
