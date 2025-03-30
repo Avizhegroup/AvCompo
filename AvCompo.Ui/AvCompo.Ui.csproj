@@ -21,7 +21,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" />
 		<PackageReference Include="BuildBundlerMinifier2022" />
-		<PackageReference Include="BuildWebCompiler2022" />
+		<!--<PackageReference Include="BuildWebCompiler2022" />-->
 	</ItemGroup>
 
 	<ItemGroup>
