@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="AvCompo.Tools/AvCompo.Tools.csproj" />
+    <Project Path="AvCompo.Ui/AvCompo.Ui.csproj" />
+  </Folder>
+  <Folder Name="/Workflow/">
+    <File Path=".github/workflows/publish-nuget.yml" />
+  </Folder>
+</Solution>
