@@ -1,5 +1,9 @@
-﻿namespace AvCompo.Ui;
-public partial class AvSearchSelect<TItem, TValue>
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+using Microsoft.AspNetCore.Components.Web;
+
+namespace AvCompo.Ui;
+public partial class AvSearchSelect<TItem, TValue> : ComponentBase
 {
     public Guid Id = Guid.NewGuid();
     public int HighlightedIndex = -1;
