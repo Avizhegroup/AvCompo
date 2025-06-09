@@ -7,7 +7,7 @@
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>AvCompo</PackageId>
-		<Version>1.2.0</Version>
+		<Version>1.2.1</Version>
 		<Authors>Alireza Tavakoli</Authors>
 		<Company>AvizheGroup</Company>
 		<Description>Avizhe Components for Blazor.</Description>

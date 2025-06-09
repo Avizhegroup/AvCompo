@@ -17,8 +17,8 @@ public partial class AvSearchSelect<TItem, TValue> : ComponentBase
 
     public string? SearchText { get; set; }
     public ElementReference SearchInputRef { get; set; }
-    public List<TItem> FilteredItems => SearchText.HasNoValue() ? Items.ToList()
-                                                                : Items.Where(item => GetItemText(item).Contains(SearchText, StringComparison.OrdinalIgnoreCase)).ToList();
+    public List<TItem> FilteredItems => string.IsNullOrEmpty(SearchText) ? Items.ToList()
+                                                                         : Items.Where(item => GetItemText(item).Contains(SearchText, StringComparison.OrdinalIgnoreCase)).ToList();
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -30,7 +30,7 @@ public partial class AvSearchSelect<TItem, TValue> : ComponentBase
 
     public string GetItemText(TItem item)
     {
-        if (TextProperty.HasNoValue())
+        if (string.IsNullOrEmpty(TextProperty))
         {
             return item?.ToString() ?? string.Empty;
         }
@@ -42,7 +42,7 @@ public partial class AvSearchSelect<TItem, TValue> : ComponentBase
 
     public TValue? GetItemValue(TItem item)
     {
-        if (ValueProperty.HasNoValue())
+        if (string.IsNullOrEmpty(ValueProperty))
         {
             return default!;
         }
