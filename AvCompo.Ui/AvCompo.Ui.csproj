@@ -7,7 +7,7 @@
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>AvCompo</PackageId>
-		<Version>1.1.0</Version>
+		<Version>1.2.0</Version>
 		<Authors>Alireza Tavakoli</Authors>
 		<Company>AvizheGroup</Company>
 		<Description>Avizhe Components for Blazor.</Description>
@@ -32,18 +32,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Resources\TextResources.Designer.cs">
-	    <DependentUpon>TextResources.resx</DependentUpon>
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	  </Compile>
+		<Compile Update="Resources\TextResources.Designer.cs">
+			<DependentUpon>TextResources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Update="Resources\TextResources.resx">
-	    <LastGenOutput>TextResources.Designer.cs</LastGenOutput>
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	  </EmbeddedResource>
+		<EmbeddedResource Update="Resources\TextResources.resx">
+			<LastGenOutput>TextResources.Designer.cs</LastGenOutput>
+			<Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
 	</ItemGroup>
 
 </Project>
