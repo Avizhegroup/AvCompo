@@ -26,13 +26,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\AvCompo.Tools\AvCompo.Tools.csproj" />
+		<Content Include="wwwroot\Scripts\AvCompo.Ui.min.js" Pack="true" PackagePath="content\wwwroot\scripts" />
+		<Content Include="wwwroot\Styles\AvCompo.Ui.min.css" Pack="true" PackagePath="content\wwwroot\css" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="wwwroot\Scripts\AvCompo.Ui.min.js" Pack="true" PackagePath="content\wwwroot\scripts" />
-		<Content Include="wwwroot\Styles\AvCompo.Ui.min.css" Pack="true" PackagePath="content\wwwroot\css" />
-		<None Include="README.md" Pack="true" PackagePath="\"/>
+	  <Compile Update="Resources\TextResources.Designer.cs">
+	    <DependentUpon>TextResources.resx</DependentUpon>
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\TextResources.resx">
+	    <LastGenOutput>TextResources.Designer.cs</LastGenOutput>
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 </Project>

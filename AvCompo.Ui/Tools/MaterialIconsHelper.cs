@@ -1,4 +1,4 @@
-﻿namespace AvCompo.Tools;
+﻿namespace AvCompo.Ui.Tools;
 public static class MaterialIconsHelper
 {
     public const string Error = "\ue000";
